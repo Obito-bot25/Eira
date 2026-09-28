@@ -1,0 +1,1021 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px 28px 64px 28px;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* HEADER CARD */
+.headerCard {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-lg);
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 680px;
+}
+
+.tagGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badgePrimary {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: var(--color-yellow);
+  color: var(--border-black);
+  border: var(--border-thin);
+  padding: 3px 8px;
+}
+
+.badgeSecondary {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--bg-surface-alt);
+  color: var(--border-black);
+  border: var(--border-thin);
+  padding: 3px 8px;
+}
+
+.badgeGreen {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--color-green);
+  color: var(--border-black);
+  border: var(--border-thin);
+  padding: 3px 8px;
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--border-black);
+}
+
+.title span {
+  background: var(--color-green);
+  padding: 0 6px;
+  border-bottom: 3px solid var(--border-black);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.streakBanner {
+  background: var(--color-yellow);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 380px;
+}
+
+.streakText strong {
+  font-family: var(--font-family-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: block;
+}
+
+.streakText span {
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.streakActionBtn {
+  background: var(--border-black);
+  color: #fff;
+  border: 2px solid var(--border-black);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: transform 0.12s ease;
+}
+
+.streakActionBtn:hover {
+  transform: translate(-1px, -1px);
+}
+
+/* STATS ROW */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.statBox {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.statIcon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.statContent h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--border-black);
+}
+
+.statContent p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* SECTION BLOCKS */
+.sectionBlock {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: var(--border-thin);
+  padding-bottom: 12px;
+}
+
+.miniLabel {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.sectionHeading {
+  font-family: var(--font-family-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--border-black);
+}
+
+.sectionMeta {
+  font-family: var(--font-family-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  padding: 3px 8px;
+}
+
+/* CORE 4 TOOLS GRID */
+.coreToolsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.coreCard {
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.coreCard:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-hard-lg);
+}
+
+.cardBreathing {
+  background: #EFF6FF;
+}
+
+.cardFocus {
+  background: #FFFBEB;
+}
+
+.cardGrounding {
+  background: #F0FDF4;
+}
+
+.cardMindfulness {
+  background: #FAF5FF;
+}
+
+.coreCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coreCardTag {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--border-black);
+  color: #fff;
+  padding: 2px 8px;
+}
+
+.coreIcon {
+  font-size: 1.8rem;
+}
+
+.coreCardTitle {
+  font-family: var(--font-family-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--border-black);
+  letter-spacing: -0.01em;
+}
+
+.coreCardDesc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+  flex-grow: 1;
+}
+
+/* Visual Indicator Boxes */
+.visualIndicatorBox {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 85px;
+}
+
+.breathingCircleAnimation {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  border: 2px solid var(--border-black);
+  animation: breathPulse 4s infinite ease-in-out;
+}
+
+@keyframes breathPulse {
+  0% { transform: scale(0.7); background: var(--color-blue); }
+  50% { transform: scale(1.3); background: var(--color-green); }
+  100% { transform: scale(0.7); background: var(--color-blue); }
+}
+
+.timerDigital {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--border-black);
+}
+
+.groundingStepsPreview {
+  display: flex;
+  gap: 8px;
+}
+
+.groundingStepsPreview span {
+  font-family: var(--font-family-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  padding: 2px 6px;
+}
+
+.mindfulPulseBar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  overflow: hidden;
+}
+
+.pulseInner {
+  height: 100%;
+  width: 40%;
+  background: var(--color-purple-bold);
+  animation: scanMove 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes scanMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(150%); }
+}
+
+.visualIndicatorLabel {
+  font-family: var(--font-family-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.coreCtaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent-purple, #7047EB);
+  color: #fff;
+  border: 2px solid var(--border-black);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.coreCtaBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard);
+  background: var(--accent-purple-hover, #5B30E0);
+}
+
+.coreCtaBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0;
+}
+
+/* GAMES GRID */
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gameCard {
+  background: var(--bg-surface);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gameCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard);
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gameTag {
+  font-family: var(--font-family-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: var(--color-yellow);
+  border: var(--border-thin);
+  padding: 2px 6px;
+}
+
+.playableBadge {
+  font-family: var(--font-family-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  background: var(--color-green);
+  border: var(--border-thin);
+  padding: 2px 6px;
+}
+
+.gameTitle {
+  font-family: var(--font-family-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--border-black);
+}
+
+.gameDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.gameStatsRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-family-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--border-black);
+  border-top: var(--border-thin);
+  padding-top: 10px;
+}
+
+.playBtn {
+  background: var(--color-yellow);
+  color: var(--border-black);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+  text-align: center;
+}
+
+.playBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-hard);
+  background: var(--color-yellow-bold);
+}
+
+/* BOTTOM SPLIT */
+.bottomSplit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.challengeBox, .tipsBox {
+  background: var(--bg-surface-alt);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.challengeHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.challengeBadge {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--color-yellow);
+  border: var(--border-thin);
+  padding: 2px 8px;
+  align-self: flex-start;
+}
+
+.challengeBox h3, .tipsBox h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.challengeBox p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.challengeBtn {
+  background: var(--border-black);
+  color: var(--color-yellow);
+  border: 2px solid var(--border-black);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 12px 18px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: transform 0.12s ease;
+}
+
+.challengeBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-hard);
+}
+
+.tipsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+/* MODALS */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.toolModalBox, .gameModalBox {
+  background: var(--bg-surface);
+  border: 4px solid var(--border-black);
+  box-shadow: var(--shadow-hard-xl);
+  padding: 32px;
+  width: min(620px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: var(--border-thick);
+  padding-bottom: 12px;
+}
+
+.toolMiniBadge {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--color-yellow);
+  border: var(--border-thin);
+  padding: 2px 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.modalHeading {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--border-black);
+}
+
+.interactiveArea {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.modalInstruction {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Breathing Visualizer */
+.breathVisualizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.breathCircle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid var(--border-black);
+  box-shadow: var(--shadow-hard);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease, background 1s ease;
+}
+
+.breathInhale {
+  transform: scale(1.15);
+  background: var(--color-blue);
+}
+
+.breathHold {
+  transform: scale(1.15);
+  background: var(--color-yellow);
+}
+
+.breathExhale {
+  transform: scale(0.85);
+  background: var(--color-green);
+}
+
+.phaseTitle {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+}
+
+.phaseCount {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.cyclesCounter {
+  font-family: var(--font-family-display);
+  font-size: 0.9rem;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  padding: 4px 12px;
+}
+
+/* Focus Display */
+.focusTimerDisplay {
+  background: var(--bg-surface-alt);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.timerBig {
+  font-family: var(--font-family-display);
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--border-black);
+}
+
+.focusPhaseText {
+  font-family: var(--font-family-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--border-black);
+}
+
+.focusControls {
+  display: flex;
+  gap: 12px;
+}
+
+.focusPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-yellow);
+  color: var(--border-black);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.focusResetBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+/* Grounding & Mindfulness Step Cards */
+.stepProgressRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stepPill {
+  font-family: var(--font-family-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  padding: 3px 8px;
+}
+
+.stepPillActive {
+  background: var(--color-yellow);
+  border: 2px solid var(--border-black);
+  font-weight: 900;
+}
+
+.stepPillDone {
+  background: var(--color-green);
+}
+
+.groundingStepCard, .mindfulStepCard {
+  background: var(--bg-surface-alt);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stepCountCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  border: 3px solid var(--border-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.groundingStepCard h3, .mindfulStepCard h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.groundingExample {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.mindfulIcon {
+  font-size: 2.2rem;
+}
+
+.toolActionRow {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.nextStepBtn {
+  background: var(--color-yellow);
+  color: var(--border-black);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.finishToolBtn {
+  background: var(--color-green);
+  color: var(--border-black);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+/* GAME INNER ELEMENTS */
+.gameInner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.gameScoreBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--bg-surface-alt);
+  border: var(--border-thin);
+  padding: 8px 16px;
+  font-family: var(--font-family-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.moleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.moleCell {
+  height: 80px;
+  font-size: 2.4rem;
+  background: var(--bg-surface-alt);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+}
+
+.moleCell:active {
+  transform: scale(0.95);
+}
+
+.connectGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  background: var(--border-black);
+  border: var(--border-thick);
+  padding: 12px;
+}
+
+.connectColumn {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.connectDisc {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--border-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.gameClueText {
+  font-size: 1rem;
+  font-weight: 600;
+  max-width: 480px;
+}
+
+.gameInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gameSubmitBtn {
+  background: var(--color-yellow);
+  color: var(--border-black);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+.sudokuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 55px);
+  gap: 6px;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.sudokuCell {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  font-family: var(--font-family-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.wordDisplay {
+  font-family: var(--font-family-display);
+  font-size: 2rem;
+  font-weight: 900;
+  background: var(--color-yellow);
+  border: var(--border-thick);
+  padding: 6px 16px;
+}
+
+.resultNotice {
+  background: var(--color-green);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard-sm);
+  padding: 10px 16px;
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .coreToolsGrid {
+    grid-template-columns: 1fr;
+  }
+  .gamesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottomSplit {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 16px 12px 48px 12px;
+  }
+  .headerCard {
+    padding: 24px 20px;
+  }
+  .sectionBlock {
+    padding: 20px 16px;
+  }
+  .gamesGrid {
+    grid-template-columns: 1fr;
+  }
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}

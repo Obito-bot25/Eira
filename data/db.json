@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "name": "Arjit Srivastava",
+      "id": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "email": "arjit25011@gmail.com",
+      "phone": "08808585782",
+      "passwordHash": "a707b57d2833797a977d8efa75f68abc:0eeaf8332771d4ef998475f2bebebcadd2163b86c50094d1dc16ee7628575b529b4cbb112b5171ad8a71a71c5df24ce69b671b54c9fbbd4e3bc43d03be1cb3fc",
+      "token": "df345dc6f912feb912100a93ea50145405c4f950f2416df952586286da9614f9",
+      "createdAt": "2026-09-28T16:24:27.922Z"
+    },
+    {
+      "name": "User Alpha",
+      "id": "f024a606-6b79-461b-8062-f2a7dae37e55",
+      "email": "usera_1790617029@campus.edu",
+      "phone": "9998887771",
+      "passwordHash": "0567ce3d4f45cbbdc0df34fd3967d84e:e39832c6eaa0ad5671f76442a73625c9cce06c5e570df049619c656dcb723f1cc02e3fc0e4dcdf4e4d962a5a109059736eefa6b1e9d3a7a09f70429390e27de1",
+      "token": "3833110c2d84471312ea710d9d221b7111b938ec8b5c5025c3d8ff1c902f5956",
+      "createdAt": "2026-09-28T17:37:09.109Z"
+    },
+    {
+      "name": "User Beta",
+      "id": "4bae3dbf-9331-4f71-bc3e-0da5151294f2",
+      "email": "userb_1790617029@campus.edu",
+      "phone": "9998887772",
+      "passwordHash": "d94eff83ba8494d351fe824282c24ef4:2a243454591578c3a624926e81ed57f7fd8fb303092e3dcc218b330cb3ca35e1df74ebe97e3e8ca22e36af3f26228938e71cbeb05ef20f4fc251be2f46d4dc96",
+      "token": "71658d71b44eae904b4d8dbbe6c20654905eda57cd91837ade5d7841c7e62d5c",
+      "createdAt": "2026-09-28T17:37:11.319Z"
+    },
+    {
+      "name": "User Alpha",
+      "id": "adab85fe-3c53-467c-aa44-a9e88f4086c1",
+      "email": "usera_1790618469@campus.edu",
+      "phone": "9998887771",
+      "passwordHash": "6a4f7ebe3254c6d33a5dcbdc1cbdbde2:0e57641d9145068eb5970bfc29141141c5a28148e83da98430dd30a65b86a336cc0803aaf1db8227b939ee4d4f8f69d3de2c86129c2048f9dcd8af1b06675b6e",
+      "token": "12653bcfca6ba8d2670ab931ce80875c643b702aad00f24d9850a846309ec699",
+      "createdAt": "2026-09-28T18:01:10.228Z"
+    },
+    {
+      "name": "User Beta",
+      "id": "c6b52181-3104-4f95-9c4b-5a78bb80bfaf",
+      "email": "userb_1790618469@campus.edu",
+      "phone": "9998887772",
+      "passwordHash": "78e7beeaac474855760df303e7ffca59:c9808cf8dcebeec8eee6ffc04ac0ec1dc647854b5b37d69a2664da9b9094508fffc9a065f4c062b3f3b9770bd97ad1db2d23b1dadf9c20eeb2be64c55d23b8ec",
+      "token": "774aaa4ec744d4f47cd564110329f358c962ccc4c8eaf8231514a4904ec4bd04",
+      "createdAt": "2026-09-28T18:01:10.301Z"
+    }
+  ],
+  "journals": [
+    {
+      "id": "865ec064-d557-4bc6-a7c0-611e791ad8e4",
+      "userId": "f024a606-6b79-461b-8062-f2a7dae37e55",
+      "title": "Alpha Journal",
+      "entry": "This is private to User Alpha.",
+      "mood": 5,
+      "tags": [],
+      "createdAt": "2026-09-28T17:37:11.255Z"
+    },
+    {
+      "id": "d34b8c98-b57b-4b82-890d-574c31749469",
+      "userId": "adab85fe-3c53-467c-aa44-a9e88f4086c1",
+      "title": "Alpha Journal",
+      "entry": "This is private to User Alpha.",
+      "mood": 5,
+      "tags": [],
+      "createdAt": "2026-09-28T18:01:10.257Z"
+    }
+  ],
+  "moods": [
+    {
+      "id": "449717bb-6a3e-4636-b002-b9ad79c470b3",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "mood": 1,
+      "createdAt": "2026-09-28T17:33:04.847Z"
+    },
+    {
+      "id": "0322252f-17d8-40a9-86cf-7fa19f9873e2",
+      "userId": "f024a606-6b79-461b-8062-f2a7dae37e55",
+      "mood": 2,
+      "createdAt": "2026-09-28T17:37:09.119Z"
+    },
+    {
+      "id": "463dd10c-6989-4abc-925f-c40c378ef362",
+      "userId": "4bae3dbf-9331-4f71-bc3e-0da5151294f2",
+      "mood": 5,
+      "createdAt": "2026-09-28T17:37:11.330Z"
+    },
+    {
+      "id": "6e3af32a-7317-4eba-bde9-92560f793a6a",
+      "userId": "adab85fe-3c53-467c-aa44-a9e88f4086c1",
+      "mood": 2,
+      "createdAt": "2026-09-28T18:01:10.250Z"
+    },
+    {
+      "id": "5edca37f-42e5-4c18-b045-2f05ba3c8403",
+      "userId": "c6b52181-3104-4f95-9c4b-5a78bb80bfaf",
+      "mood": 5,
+      "createdAt": "2026-09-28T18:01:10.308Z"
+    },
+    {
+      "id": "ff772db1-f54e-4de4-a32f-c6831c5abc39",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "mood": 3,
+      "createdAt": "2026-09-28T18:01:38.578Z"
+    },
+    {
+      "id": "917444c5-a6c8-4b07-bacd-4f5454580250",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "mood": 4,
+      "createdAt": "2026-09-28T18:01:39.420Z"
+    },
+    {
+      "id": "151f4aef-474a-4da9-9ff8-1ba7c4bdb40b",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "mood": 5,
+      "createdAt": "2026-09-28T18:01:40.274Z"
+    },
+    {
+      "id": "d75a28cb-a917-422e-b09b-10a13adf1a99",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "mood": 5,
+      "createdAt": "2026-09-28T18:01:41.146Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": "6f1b03fa-446c-4daa-8c06-df97a9e98f7e",
+      "userId": "f024a606-6b79-461b-8062-f2a7dae37e55",
+      "type": "breathing",
+      "completedAt": "2026-09-28T17:37:12.017Z"
+    },
+    {
+      "id": "2e885056-200e-4fd9-b13c-7245a0d1fb7b",
+      "userId": "46b001c4-1d9f-453d-8e2c-3097c89935b4",
+      "type": "challenge",
+      "completedAt": "2026-09-28T17:38:57.701Z"
+    },
+    {
+      "id": "470b99d7-5238-4ead-8840-c1a62e176456",
+      "userId": "adab85fe-3c53-467c-aa44-a9e88f4086c1",
+      "type": "breathing",
+      "completedAt": "2026-09-28T18:01:10.421Z"
+    }
+  ]
+}

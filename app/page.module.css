@@ -1,0 +1,1241 @@
+.main {
+  background-color: var(--bg-canvas, #F5F5F0);
+  min-height: calc(100vh - 80px);
+  color: #000000;
+  padding: 40px 6% 80px;
+  font-family: var(--font-family-body, "Plus Jakarta Sans", sans-serif);
+}
+
+/* Toast Banner */
+.toastBanner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  border: 2.5px solid #000000;
+  box-shadow: 5px 5px 0 #000000;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.88rem;
+  max-width: 480px;
+}
+
+.toastTag {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.toastClose {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* 1. Hero Section */
+.heroSection {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 2.5px solid #000000;
+}
+
+.heroBadgeRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: 2.5px 2.5px 0 #000000;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border: 1px solid #000000;
+}
+
+.heroTag {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.heroTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.purpleAccent {
+  color: var(--accent-purple, #7047EB);
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.heroActionRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 14px 28px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.primaryCta:hover {
+  background: var(--accent-purple-hover, #5B30E0);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.primaryCta:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #000000;
+}
+
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: #000000;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 14px 28px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.secondaryCta:hover {
+  background: var(--accent-lime, #D4FF00);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.secondaryCta:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #000000;
+}
+
+.guaranteeRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #333333;
+}
+
+.guaranteeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Geometric Bauhaus Illustration Card (matching reference right column) */
+.heroVisualWrap {
+  width: 100%;
+}
+
+.geometricCard {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0 #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.geoCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.geoVersionBadge {
+  background: #000000;
+  color: var(--accent-lime, #D4FF00);
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  letter-spacing: 0.06em;
+}
+
+.geoArrowBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent-lime, #D4FF00);
+  border: 2px solid #000000;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.bauhausGraphic {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #EFEFEA;
+  border: 2px solid #000000;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.purpleArch {
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  width: 48%;
+  height: 90%;
+  background: var(--accent-purple, #7047EB);
+  border: 2.5px solid #000000;
+  border-bottom: none;
+  /* Bauhaus half-circle arch */
+  border-top-left-radius: 999px !important;
+  border-top-right-radius: 999px !important;
+}
+
+.orangeBlock {
+  position: absolute;
+  right: 28%;
+  bottom: 0;
+  width: 25%;
+  height: 60%;
+  background: var(--accent-orange, #FF5500);
+  border: 2.5px solid #000000;
+  border-bottom: none;
+}
+
+.limeBlock {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 28%;
+  height: 80%;
+  background: var(--accent-lime, #D4FF00);
+  border: 2.5px solid #000000;
+  border-bottom: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotMatrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #000000;
+}
+
+.geoCardBottom {
+  border-top: 2px solid #000000;
+  padding-top: 14px;
+}
+
+.geoStatusLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.statusPill {
+  background: var(--accent-lime, #D4FF00);
+  border: 1.5px solid #000000;
+  padding: 2px 6px;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+/* 2. The 4 Real Functional Pillars */
+.pillarsSection {
+  margin-bottom: 60px;
+}
+
+.sectionHeaderRow {
+  margin-bottom: 24px;
+}
+
+.secMiniTag {
+  display: inline-block;
+  background: var(--accent-lime, #D4FF00);
+  border: 2px solid #000000;
+  padding: 2px 8px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pillarCard {
+  background: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.pillarCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.pillarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pillarNum {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: var(--accent-lime, #D4FF00);
+  border: 2px solid #000000;
+  padding: 2px 8px;
+}
+
+.arrowIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #EFEFEA;
+  border: 2px solid #000000;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.pillarHeading {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.pillarDesc {
+  color: #4B5563;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.pillarAction {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* 3. Daily Mood Check-In */
+.moodSection {
+  margin-bottom: 60px;
+}
+
+.moodCard {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0 #000000;
+  padding: 36px;
+}
+
+.moodHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.moodGreeting {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 6px 0 2px 0;
+}
+
+.moodQuestion {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #4B5563;
+}
+
+.currentMoodBadge {
+  background: var(--accent-lime, #D4FF00);
+  border: 2px solid #000000;
+  box-shadow: 2.5px 2.5px 0 #000000;
+  padding: 6px 12px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 900;
+  display: flex;
+  gap: 6px;
+}
+
+.moodButtonsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.moodBtn {
+  background: #F5F5F0;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.moodBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #000000;
+  background: #FFFFFF;
+}
+
+.moodBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #000000;
+}
+
+.moodBtnActive {
+  background: #000000;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 #000000;
+  transform: translate(3px, 3px);
+}
+
+.moodColorBlock {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000000;
+}
+
+.moodBtnLabel {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.moodBtnDesc {
+  font-size: 0.72rem;
+  color: #6B7280;
+  font-weight: 600;
+  text-align: center;
+}
+
+.moodBtnActive .moodBtnDesc {
+  color: #D1D5DB;
+}
+
+.moodBtnDisabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Dashboard Story Divider */
+.dashboardDivider {
+  margin: 32px 0 28px 0;
+  border: none;
+  border-top: 3px dashed #000000;
+}
+
+.dashboardStory {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboardHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dashboardSecTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* 3-Col Weekly Metrics */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.metricBox {
+  background: #F5F5F0;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metricNum {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.metricLabel {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #4B5563;
+}
+
+/* 7-Day Trend Card */
+.trendCard {
+  background: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.trendGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.trendDayCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.trendDayHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.trendDayName {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.trendTodayTag {
+  font-size: 0.58rem;
+  font-weight: 900;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 1px 4px;
+  letter-spacing: 0.05em;
+}
+
+.trendSlot {
+  width: 100%;
+  min-height: 76px;
+  border: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  text-align: center;
+  gap: 4px;
+}
+
+.trendSlotFilled {
+  box-shadow: 2.5px 2.5px 0 #000000;
+  font-weight: 900;
+}
+
+.trendSlotScore {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.trendSlotLabel {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.trendSlotEmpty {
+  background: #F5F5F0;
+  color: #9CA3AF;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-style: dashed;
+}
+
+.trendLegend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.72rem;
+  font-weight: 800;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  padding-top: 6px;
+  border-top: 1.5px solid #E5E7EB;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid #000000;
+}
+
+/* EIRA Noticed Insight Card */
+.insightCard {
+  background: #EFEFEA;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.insightTag {
+  display: inline-block;
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 3px 8px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+}
+
+.insightQuote {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.3;
+  color: #000000;
+  margin: 0;
+}
+
+.insightActionWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.insightSubtext {
+  font-size: 0.85rem;
+  color: #4B5563;
+  font-weight: 600;
+  max-width: 520px;
+}
+
+.insightActionBtn {
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 12px 20px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  white-space: nowrap;
+}
+
+.insightActionBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+/* Dashboard Status & Notice Boxes */
+.dashboardStatusBox {
+  background: #F5F5F0;
+  border: 2px solid #000000;
+  padding: 16px 20px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dashboardRetryBtn {
+  background: #000000;
+  color: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 6px 14px;
+  font-weight: 900;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.dashboardNoticeLink {
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  padding: 6px 12px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* 4. AI Companion Spotlight Card */
+.aiSpotlightSection {
+  margin-bottom: 60px;
+}
+
+.aiCard {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0 #000000;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.aiCardLeft {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aiTagRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.aiMiniTag {
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 3px 8px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.aiStatusBadge {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #15803D;
+}
+
+.aiTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.aiDesc {
+  color: #4B5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.promptChips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.promptChipLabel {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #6B7280;
+}
+
+.promptChip {
+  background: #F5F5F0;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  padding: 8px 12px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.promptChip:hover {
+  background: var(--accent-lime, #D4FF00);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+.aiActionRow {
+  margin-top: auto;
+}
+
+.aiPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 12px 24px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.aiPrimaryBtn:hover {
+  background: var(--accent-purple-hover, #5B30E0);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+/* Mock Terminal */
+.aiCardRight {
+  background: #18181B;
+  border-left: 3px solid #000000;
+  color: #FFFFFF;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mockTerminal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid #27272A;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.terminalDots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminalDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50% !important;
+  background: #EF4444;
+}
+.terminalDots span:nth-child(2) { background: #F59E0B; }
+.terminalDots span:nth-child(3) { background: #10B981; }
+
+.terminalName {
+  font-family: monospace;
+  font-size: 0.72rem;
+  color: #A1A1AA;
+}
+
+.terminalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.chatMessageAssistant {
+  background: #27272A;
+  border-left: 3px solid var(--accent-lime, #D4FF00);
+  padding: 10px 14px;
+}
+
+.chatMessageUser {
+  background: #3F3F46;
+  border-left: 3px solid var(--accent-purple, #7047EB);
+  padding: 10px 14px;
+}
+
+.speakerTag {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: var(--accent-lime, #D4FF00);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.speakerTagUser {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: var(--accent-purple, #7047EB);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 5. Somatics & Wellness Tools Quad */
+.wellnessQuadSection {
+  margin-bottom: 60px;
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.toolCard {
+  background: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.12s ease;
+}
+
+.toolCard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.toolTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.toolBadgePurple,
+.toolBadgeLime,
+.toolBadgeOrange,
+.toolBadgeBlue {
+  border: 2px solid #000000;
+  padding: 2px 8px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.toolBadgePurple { background: var(--accent-purple, #7047EB); color: #FFFFFF; }
+.toolBadgeLime { background: var(--accent-lime, #D4FF00); }
+.toolBadgeOrange { background: var(--accent-orange, #FF5500); color: #FFFFFF; }
+.toolBadgeBlue { background: #BAE6FD; }
+
+.toolTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.toolDesc {
+  color: #4B5563;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.toolBtn {
+  align-self: flex-start;
+  background: #F5F5F0;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0 #000000;
+  padding: 8px 14px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #000000;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.toolBtn:hover {
+  background: var(--accent-lime, #D4FF00);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 #000000;
+}
+
+/* 6. Verified Crisis Emergency Banner */
+.emergencySection {
+  margin-bottom: 40px;
+}
+
+.emergencyCard {
+  background: #FFFFFF;
+  border: 3.5px solid #000000;
+  box-shadow: 6px 6px 0 #000000;
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.emergencyAlertTag {
+  display: inline-block;
+  background: var(--accent-orange, #FF5500);
+  color: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 3px 8px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.emergencyHeading {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 6px 0;
+}
+
+.emergencyDesc {
+  color: #4B5563;
+  font-size: 0.92rem;
+  max-width: 620px;
+  margin: 0;
+}
+
+.emergencyActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.emergencyCallBtn {
+  background: #FF5500;
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 12px 18px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.emergencyCallBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+.teleManasBtn {
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 12px 18px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.teleManasBtn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+.viewDirectoryBtn {
+  background: #EFEFEA;
+  color: #000000;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 12px 18px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .toolsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .moodButtonsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .aiCard {
+    grid-template-columns: 1fr;
+  }
+  .aiCardRight {
+    border-left: none;
+    border-top: 3px solid #000000;
+  }
+}
+
+@media (max-width: 680px) {
+  .main {
+    padding: 24px 4% 60px;
+  }
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+  .moodButtonsGrid {
+    grid-template-columns: 1fr;
+  }
+  .emergencyCard {
+    padding: 24px 20px;
+  }
+  .emergencyActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .emergencyActions a {
+    text-align: center;
+  }
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+  .trendGrid {
+    gap: 4px;
+  }
+  .trendSlot {
+    min-height: 64px;
+    padding: 4px 2px;
+  }
+  .trendSlotScore {
+    font-size: 1.1rem;
+  }
+  .trendSlotLabel {
+    font-size: 0.55rem;
+  }
+}

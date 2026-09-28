@@ -1,0 +1,238 @@
+.container {
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-primary, #FAF7F2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+}
+
+.card {
+  background: var(--bg-card, #FFFFFF);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: var(--color-yellow, #FEF08A);
+  border: 2px solid var(--color-black, #121212);
+  box-shadow: 2px 2px 0 var(--color-black, #121212);
+  padding: 4px 10px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.secBadge {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #059669;
+}
+
+.title {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  color: var(--color-black, #121212);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #4B5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.google,
+.other {
+  border: 2.5px solid var(--color-black, #121212);
+  background: var(--bg-card, #FFFFFF);
+  color: var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 10px 14px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.google:hover,
+.other:hover {
+  background: var(--bg-secondary, #F4EFE6);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid var(--color-black, #121212);
+}
+
+.divider span {
+  padding: 0 12px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.inputGroup label {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-black, #121212);
+}
+
+.inputGroup input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2.5px solid var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 12px 14px;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black, #121212);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  background: #FFFBEB;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.forgot {
+  background: transparent;
+  border: none;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: #4B5563;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.errorBox {
+  background: var(--color-pink, #FECDD3);
+  border: 2.5px solid var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.loginButton {
+  background: var(--color-yellow, #FEF08A);
+  color: var(--color-black, #121212);
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  width: 100%;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 8px;
+}
+
+.loginButton:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+}
+
+.loginButton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--color-black, #121212);
+}
+
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.signupBox {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 2px dashed var(--color-black, #121212);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.signupLink {
+  color: var(--color-black, #121212);
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  text-decoration: underline;
+  margin-left: 6px;
+}

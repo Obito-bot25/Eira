@@ -1,0 +1,371 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Top Purple Banner matching reference */
+.topBanner {
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border-bottom: 2.5px solid #000000;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bannerTag {
+  background: #000000;
+  color: var(--accent-lime, #D4FF00);
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.bannerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bannerLink {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: 900;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.bannerLink:hover {
+  opacity: 0.85;
+}
+
+.bannerClose {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background-color: #FFFFFF;
+  border-bottom: 2.5px solid #000000;
+}
+
+/* Brand Mark: Yellow Logo Box + Bold Title */
+.brandMark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logoBadge {
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 1.15rem;
+  padding: 6px 10px;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  letter-spacing: -0.03em;
+}
+
+.brandTitle {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+/* Desktop Nav Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navItem {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  color: #000000;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  border: 2px solid transparent;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.navItem:hover {
+  background: #EFEFEA;
+  border-color: #000000;
+}
+
+.navItemActive {
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+}
+
+.navItemActive:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.activeDot {
+  display: none;
+}
+
+/* Actions Right */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.authRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.loginLink {
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.85rem;
+  color: #000000;
+  padding: 6px 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.loginLink:hover {
+  border-color: #000000;
+  background: #EFEFEA;
+}
+
+.primaryCtaBtn {
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  padding: 8px 16px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  white-space: nowrap;
+}
+
+.primaryCtaBtn:hover {
+  background: var(--accent-purple-hover, #5B30E0);
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+.primaryCtaBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #000000;
+}
+
+.userControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--accent-lime, #D4FF00);
+  color: #000000;
+  border: 2.5px solid #000000;
+  box-shadow: 2.5px 2.5px 0 #000000;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.logoutBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  background: #FF5500;
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 2.5px 2.5px 0 #000000;
+  cursor: pointer;
+}
+
+.loadingPlaceholder {
+  width: 70px;
+  height: 32px;
+  background: #EFEFEA;
+  border: 2px solid #000000;
+}
+
+.menuToggle {
+  display: none;
+  background: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 2.5px 2.5px 0 #000000;
+  padding: 4px;
+  cursor: pointer;
+}
+
+/* Mobile Drawer */
+.mobileDrawer {
+  display: none;
+  background: #FFFFFF;
+  border-bottom: 3px solid #000000;
+  padding: 16px 20px;
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.mobileNavItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: 2px solid #000000;
+  background: #F5F5F0;
+}
+
+.mobileActiveItem {
+  background: var(--accent-lime, #D4FF00);
+}
+
+.mobileActiveBadge {
+  font-size: 0.68rem;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  font-weight: 900;
+}
+
+.mobileFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 2px solid #000000;
+  padding-top: 14px;
+}
+
+.mobileAiCta {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+  border: 2.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.mobileUserRow,
+.mobileAuthRow {
+  display: flex;
+  gap: 8px;
+}
+
+.mobileProfileLink,
+.mobileLoginBtn,
+.mobileSignupBtn {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-family: var(--font-family-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  border: 2px solid #000000;
+  font-size: 0.85rem;
+}
+
+.mobileProfileLink {
+  background: var(--accent-lime, #D4FF00);
+}
+
+.mobileLoginBtn {
+  background: #F5F5F0;
+}
+
+.mobileSignupBtn {
+  background: var(--accent-purple, #7047EB);
+  color: #FFFFFF;
+}
+
+.mobileLogoutBtn {
+  background: #FF5500;
+  color: #FFFFFF;
+  border: 2px solid #000000;
+  padding: 10px 14px;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+/* Responsiveness */
+@media (max-width: 990px) {
+  .navLinks {
+    display: none;
+  }
+  .menuToggle {
+    display: flex;
+  }
+  .mobileDrawer {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+  .bannerRight {
+    display: none;
+  }
+}

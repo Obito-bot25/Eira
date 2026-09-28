@@ -1,0 +1,371 @@
+.page {
+  background-color: var(--bg-primary, #FAF7F2);
+  color: var(--color-black, #121212);
+  min-height: calc(100vh - 80px);
+  padding: 40px 6% 80px;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+}
+
+.aboutSection {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.topBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card, #FFFFFF);
+  border: 2.5px solid var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 4px 12px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 1px solid #121212;
+}
+
+.title {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.highlightPill {
+  background: var(--color-yellow, #FEF08A);
+  border: 3px solid var(--color-black, #121212);
+  padding: 2px 14px;
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+.subtitle {
+  color: #4B5563;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Mission & Vision */
+.missionVision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+.cardMission,
+.cardVision {
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardMission {
+  background: var(--color-yellow, #FEF08A);
+}
+
+.cardVision {
+  background: var(--color-blue, #BAE6FD);
+}
+
+.cardTagRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cardBadge {
+  background: #FFFFFF;
+  border: 2px solid var(--color-black, #121212);
+  padding: 2px 8px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.cardIcon {
+  font-size: 1.4rem;
+}
+
+.cardMission h3,
+.cardVision h3 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 12px 0;
+}
+
+.cardMission p,
+.cardVision p {
+  color: #1F2937;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.missionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.visionStat {
+  margin-top: auto;
+  background: #FFFFFF;
+  border: 2px solid var(--color-black, #121212);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statLarge {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-black, #121212);
+  white-space: nowrap;
+}
+
+.statCaption {
+  font-size: 0.82rem;
+  color: #4B5563;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* Story Section */
+.storySection {
+  background: var(--bg-card, #FFFFFF);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+  padding: 44px;
+  margin-bottom: 60px;
+}
+
+.secBadge {
+  display: inline-block;
+  background: var(--color-green, #BBF7D0);
+  border: 2px solid var(--color-black, #121212);
+  padding: 3px 8px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.storySection h2 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.storySection p {
+  color: #4B5563;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.storySection p:last-child {
+  margin-bottom: 0;
+}
+
+/* Values */
+.valuesSection {
+  margin-bottom: 60px;
+}
+
+.sectionHeaderRow {
+  margin-bottom: 24px;
+}
+
+.valuesHeading {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.valueCard {
+  background: var(--bg-card, #FFFFFF);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.valIcon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary, #F4EFE6);
+  border: 2px solid var(--color-black, #121212);
+  box-shadow: 2px 2px 0 var(--color-black, #121212);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.valueCard h4 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin: 0 0 8px 0;
+}
+
+.valueCard p {
+  color: #4B5563;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Team */
+.teamSection {
+  margin-bottom: 60px;
+}
+
+.teamSubtitle {
+  color: #4B5563;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.teamCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.teamCard {
+  background: var(--bg-secondary, #F4EFE6);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.teamIcon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.teamCard h4 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.05rem;
+  font-weight: 900;
+  margin: 0 0 8px 0;
+}
+
+.teamCard p {
+  color: #4B5563;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* About CTA */
+.aboutCta {
+  background: var(--bg-card, #FFFFFF);
+  border: 3.5px solid var(--color-black, #121212);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+  padding: 40px;
+  text-align: center;
+}
+
+.aboutCta h3 {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0 0 24px 0;
+}
+
+.ctaBtns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  background: var(--color-yellow, #FEF08A);
+  color: var(--color-black, #121212);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  padding: 12px 24px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.primaryCta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+}
+
+.secondaryCta {
+  background: var(--bg-secondary, #F4EFE6);
+  color: var(--color-black, #121212);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  padding: 12px 24px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.secondaryCta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+}
+
+/* Responsiveness */
+@media (max-width: 860px) {
+  .missionVision,
+  .valuesGrid,
+  .teamCards {
+    grid-template-columns: 1fr;
+  }
+}

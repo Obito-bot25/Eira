@@ -1,0 +1,317 @@
+================================================================================
+EIRA MENTAL WELLNESS APPLICATION — DAILY IMPLEMENTATION CHANGELOG
+Date: September 28, 2026
+Project: EIRA (Student Mental Wellness Web Application)
+Platform: Next.js 16 (App Router) + Vanilla CSS Modules + JSON File Database
+================================================================================
+
+--------------------------------------------------------------------------------
+1. OBJECTIVE & SUMMARY OF WORK
+--------------------------------------------------------------------------------
+Today's development focused on three major milestones:
+  Phase 1: Neo-Brutalist Visual Redesign & Design System Unification
+  Phase 2: Technical Claim & Content Audit (Purging Fabricated / Unsupported Claims)
+  Phase 3: Data-Driven Core Product Loop (Real Persisted Check-Ins, Metrics, Trends & Tools)
+
+Every change strictly preserved existing routing, authentication, and core functionality
+while delivering an authentic, data-driven, non-diagnostic student wellness companion.
+
+================================================================================
+PHASE 1: NEO-BRUTALIST VISUAL REDESIGN
+================================================================================
+A. Design System Architecture
+   - Implemented Neo-Brutalist tokens across all module CSS files:
+     * Off-white background: #F5F5F0 / #EFEFEA
+     * Deep stark black: #000000
+     * Accent Purple: #7047EB
+     * Accent Lime: #D4FF00
+     * Accent Orange: #FF5500
+     * Accent Blue: #BAE6FD
+     * Accent Pink: #FECDD3
+   - Strict 2.5px - 3px solid black borders (`solid #000000`)
+   - Hard offset shadows without blur (`box-shadow: 4px 4px 0 #000000` / `6px 6px 0 #000000`)
+   - High-contrast editorial typography (`Space Grotesk` display + clean system body)
+   - Abstract Bauhaus geometric visuals replacing generic illustrations
+
+B. Redesigned Pages & Components
+   - app/page.js & app/page.module.css:
+     * Split-column Hero with live status pill and geometric Bauhaus card
+     * 4 Pillars grid: Check In, Reflect, Understand, Get Support
+     * Daily Mood Check-In module with color-coded baseline telemetry
+     * AI Companion Spotlight with dark mock terminal preview
+     * 4-Card Somatic Lab Quad (4-7-8 Breathing, Focus Timer, 5-4-3-2-1 Grounding, Games)
+     * High-visibility Crisis Emergency banner
+   - app/components/Navbar/page.js & Navbar.module.css:
+     * High-contrast sticky header with marqueed status strip and responsive drawer
+   - app/components/AiChatbot/page.js & Ai.module.css:
+     * Retro-terminal Neo-Brutalist chat interface with quick coping prompt chips
+   - app/components/Journal/page.js & Journal.module.css:
+     * Tagged mood-stamped reflective journal with character counters
+   - app/components/Support/page.js & Support.module.css:
+     * Multi-tier support layout: public crisis lines, AI chat, specialist booking
+   - app/wellness/page.js & wellness.module.css:
+     * Somatic interactive tools (4-7-8 breathing modal, Pomodoro study sprint,
+       5-4-3-2-1 grounding, and 5 cognitive puzzles/games)
+   - app/components/PeerGroup/page.js & PeerGroup.module.css:
+     * Student-led peer circle cards, community charter, and active discussion feed
+   - app/components/Quiz/page.js & Quiz.module.css:
+     * 9-item PHQ-9 self-screening questionnaire with non-diagnostic score tiers
+   - app/components/Login/page.js, app/components/Signup/page.js:
+     * High-contrast auth card with clear validation feedback and session persistence
+   - app/components/Profile/page.js, app/components/Campus/page.js, app/about/page.js, app/services/page.js:
+     * Polished Neo-Brutalist typography, layout grids, and information architecture
+
+================================================================================
+PHASE 2: TECHNICAL CLAIM & CONTENT AUDIT
+================================================================================
+A. Audit Rationale & Technical Code Verification
+   - Evaluated all marketing copy against actual backend implementations:
+     * "100% PRIVATE LOCAL SESSION" -> UNSUPPORTED (Data is stored in backend db.json).
+       Replaced with: "PRIVATE BY DESIGN".
+     * "ENCRYPTED PRIVATE STUDENT JOURNALING" -> UNSUPPORTED (Plain JSON at rest).
+       Replaced with: "PRIVATE JOURNALING".
+     * "100% ANONYMOUS" -> UNSUPPORTED (No zero-knowledge cryptography).
+       Replaced with: "STUDENT PEER CIRCLES" & "PEER MEMBER".
+     * "24/7 OPEN CIRCLES" -> UNSUPPORTED (No round-the-clock moderation team).
+       Removed; replaced with "SAFE COMMUNITY CHARTER".
+     * "EVIDENCE-BASED" -> UNSUPPORTED (No proprietary clinical trials documented).
+       Replaced with: "GUIDED WELLNESS TOOLS" & "PRACTICAL WELLNESS TIPS".
+     * "24/7 STUDENT WELLNESS PLATFORM" -> AMBIGUOUS (Implied human 24/7 doctors).
+       Clarified 3 tiers:
+         1. EIRA Automated AI & Self-Service Tools (Always available)
+         2. External Public Crisis Helplines: Tele-MANAS (14416) & Kiran (1800-599-0019) (24/7)
+         3. Campus Wellness Specialists (Scheduled during working hours)
+     * "VERIFIED" HELPLINES / DOCTORS -> Removed fabricated verification claims;
+       re-titled as "OFFICIAL CRISIS & HELPLINE DIRECTORY" and "PUBLIC HELPLINES".
+     * "PHQ-9" -> Replaced 4-item mockup with standard 9-item PHQ-9 questionnaire
+       with explicit non-diagnostic disclaimers and healthcare advisory.
+
+B. Full Search Verification Across Entire Codebase
+   - "100%": 0 occurrences in copy (only standard CSS dimensions/keyframes).
+   - "anonymous": 0 occurrences.
+   - "encrypted": 0 occurrences.
+   - "24/7": 5 occurrences (all strictly qualified as external national crisis helplines).
+   - "verified": 0 occurrences.
+   - "evidence-based": 0 occurrences.
+   - "accuracy": 0 occurrences (purged fabricated metrics like "98% Accuracy").
+   - "students": 14 occurrences (all legitimate descriptive nouns: "designed for students").
+   - "campuses": 0 occurrences (purged fabricated metrics like "150+ Campuses").
+
+================================================================================
+PHASE 3: DATA-DRIVEN CORE PRODUCT LOOP
+================================================================================
+A. Extended Database Architecture (lib/db.js & data/db.json)
+   - Extended existing file database to maintain separate top-level collections:
+     * users: [{ id, name, email, phone, passwordHash, token, createdAt }]
+     * journals: [{ id, userId, title, entry, mood, tags, createdAt }]
+     * moods: [{ id, userId, mood, createdAt }]
+     * activities: [{ id, userId, type, completedAt }]
+   - Did not introduce secondary databases; retained lightweight, fast file store.
+
+B. New REST API Endpoints Created
+   1. POST /api/moods
+      - Authenticates via httpOnly session cookie `eira_session`.
+      - Derives userId strictly from verified session. NEVER trusts client userId.
+      - Strictly validates mood as integer between 1 and 5 (1=LOW, 2=NOT GREAT, 3=OKAY, 4=GOOD, 5=GREAT).
+      - Rejects invalid values (0, 6, strings, floats) with HTTP 400.
+      - Rejects unauthenticated calls with HTTP 401.
+      - Returns HTTP 201 with saved mood object.
+   2. GET /api/moods
+      - Authenticated endpoint returning user's mood telemetry sorted descending.
+      - Supports `?limit=` query parameter.
+   3. POST /api/activity
+      - Records completion of wellness tools (breathing, grounding, focus, games).
+      - Persists id, userId, type, and completedAt.
+   4. GET /api/activity
+      - Returns authenticated user's activity completions.
+   5. GET /api/dashboard/summary
+      - Consolidated server-calculated endpoint providing real-time synchronization:
+        * metrics: checkInsThisWeek, journalsThisWeek, activitiesThisWeek (past 7 days)
+        * weeklyTrend: 7-day calendar array ending today
+        * insight: deterministic descriptive pattern analysis
+        * recommendation: personalized tool suggestion based on latest check-in
+        * latestMood: most recent mood record
+
+C. Deterministic Wellbeing Insight & Metrics Engine (lib/insights.js)
+   - Created pure mathematical utility:
+     * calculateWeeklyMetrics: Filters records within Date.now() - 7 * 86400 * 1000.
+     * buildWeeklyTrend: Constructs 7 calendar days ending today.
+       - Missing days remain strictly null and render as "—" (NEVER treated as 0 or negative).
+     * generateInsight: Deterministic non-diagnostic check-in pattern analysis:
+       - 0 check-ins: "START WITH TODAY. LOG YOUR FIRST CHECK-IN TO SEE YOUR PERSONAL TREND."
+       - 1 check-in: "ONE CHECK-IN LOGGED. COME BACK TOMORROW TO BUILD YOUR WEEK."
+       - 2 check-ins: "CHECK IN FOR A FEW MORE DAYS TO SEE YOUR TREND."
+       - 3+ check-ins: Compares earlier vs later average:
+         * Trending Up (+0.5+): "YOUR RECENT CHECK-INS ARE TRENDING UPWARD."
+         * Trending Down (-0.5-): "YOUR RECENT CHECK-INS HAVE BEEN LOWER THAN EARLIER THIS WEEK."
+         * Steady: "YOUR RECENT CHECK-INS HAVE BEEN FAIRLY STEADY."
+       - STRICT RULE: Absolutely zero psychiatric or diagnostic language.
+     * getPersonalizedRecommendation:
+       - Mood 1-2 (LOW, NOT GREAT): Suggests "TRY A GROUNDING EXERCISE →" (/wellness)
+       - Mood 3 (OKAY): Suggests "TRY A BREATHING SESSION →" (/wellness)
+       - Mood 4-5 (GOOD, GREAT): Suggests "TRY A FOCUS SESSION →" (/wellness)
+
+D. Connected Homepage & Story Dashboard (app/page.js & page.module.css)
+   - Connected 5 mood buttons to /api/moods with live loading states ("SAVING...").
+   - Added live toast confirmation banner with clear error vs confirmed styling.
+   - Refreshes dashboard calculations immediately via loadDashboardSummary() without page reload.
+   - Visualizes YOUR WEEK with 3 real calculated metric boxes:
+     * CHECK-INS THIS WEEK
+     * JOURNALS THIS WEEK
+     * WELLNESS SESSIONS
+   - Visualizes YOUR TREND with real 7-day Neo-Brutalist grid:
+     * Day labels (SUN..SAT), TODAY badge, solid color score pills, dashed missing slots.
+     * Legend mapping 1 LOW (#FF5500) through 5 GREAT (#D4FF00).
+   - Visualizes EIRA NOTICED:
+     * High-visibility quote box with deterministic insight and direct action link.
+   - Complete state coverage:
+     * Unauthenticated prompt with direct login link
+     * Loading state: "LOADING YOUR WEEK..."
+     * Error state: "COULDN'T LOAD YOUR CHECK-INS. [TRY AGAIN]"
+     * Empty state: "NO CHECK-INS YET — START WITH TODAY"
+
+E. Connected Wellness Lab (app/wellness/page.js)
+   - Hooked finishActivity() to call POST /api/activity when completing:
+     * 4-7-8 Breathing resets
+     * Pomodoro Focus sprints
+     * 5-4-3-2-1 Sensory Grounding
+     * Cognitive Puzzles & Games (Sudoku, Crosswords, Whack-a-Mole, Connect Four)
+   - Loaded real activity counts from /api/activity and mood counts from /api/moods.
+   - Removed hardcoded 15-day streak and Gold Tier mock statistics.
+
+================================================================================
+PHASE 4: TESTING & VALIDATION
+================================================================================
+A. Multi-User Isolation Test Suite
+   - Executed automated integration test script verifying:
+     * Unauthenticated calls to /api/moods return 401.
+     * Unauthenticated calls to /api/dashboard/summary return authenticated: false.
+     * User A (signed up) logs mood 2 -> sees mood 2.
+     * User A creates private journal -> journal recorded.
+     * User B (signed up) logs mood 5 -> sees mood 5.
+     * User A CANNOT see User B's mood 5.
+     * User B CANNOT see User A's mood 2 or User A's private journal.
+     * User A logs activity -> dashboard reflects 1 wellness session.
+     * Strict input validation rejects moods: 0, 6, "string", 3.5.
+   - RESULT: All isolation and validation assertions passed (Exit code 0).
+
+B. Build & Route Health Verification
+   - Command: `npm run build` (`next build --webpack`)
+   - Result: Compiled successfully in 2.3 seconds with 0 errors across all 28 routes:
+     * 17 Static routes
+     * 11 Dynamic API routes
+   - Local dev server: Active on http://localhost:3000 returning HTTP 200 across all 11 user-facing routes.
+
+================================================================================
+PHASE 5: PERFORMANCE & UX SMOOTHNESS OPTIMIZATIONS
+================================================================================
+A. Persistent Shared Navbar Architecture
+   - Moved Navbar from 14 individual page instances into app/layout.js.
+   - Navbar now persists across route changes without unmounting, flashing, or
+     layout shifts.
+   - Optimized auth check: eliminated repetitive /api/auth/me fetching on every
+     intermediate page transition (e.g. Home -> Wellness -> Journal). Auth is fetched
+     once on mount and synchronized when returning to root, profile, or auth events.
+
+B. Split Homepage Client / Server Component Boundaries
+   - Refactored app/page.js from a monolith "use client" component into a Server Component.
+   - 80% of the homepage (Hero headline, Bauhaus geometric card, 4 Pillars,
+     AI Spotlight static copy & mock terminal, Somatic quad, Emergency banner)
+     is now rendered as pure, static server HTML.
+   - Extracted dynamic telemetry, check-in, weekly metrics, 7-day trend, and
+     EIRA Noticed recommendation into app/components/MoodDashboard/MoodDashboard.js.
+   - Reduced homepage-specific client JS bundle from 29.5 KB to 13.6 KB (54% reduction!).
+
+C. Reduced Unnecessary Route Prefetching
+   - Evaluated all <Link> elements on the homepage.
+   - Maintained eager prefetch on primary user journeys:
+     * /components/AiChatbot (Hero primary CTA)
+     * /components/Journal (Hero secondary CTA, Pillar 2)
+     * /wellness (Pillar 3, Somatic Lab buttons)
+   - Added prefetch={false} on secondary / off-viewport links:
+     * /components/Support (Support Directory)
+     * /components/Login (Auth notice)
+     * AI scenario prompt chips
+
+D. Targeted Composite Transitions (Eliminated `transition: all`)
+   - Replaced unconstrained `transition: all 0.12s ease;` with hardware-accelerated
+     targeted transitions on all interactive elements in page.module.css, Navbar.module.css,
+     and globals.css:
+     * `transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;`
+   - Completely eliminated style recalculations and layout thrashing during mouseover
+     and scrolling.
+
+E. State Machine Consolidation
+   - Consolidated 4 sequential state updates (userName, currentMood cache, currentMood API,
+     isLoadingDashboard) in MoodDashboard into a single atomic state batch.
+   - Eliminated visual layout jumps and rapid re-renders during initial load.
+
+F. Smooth In-Page Navigation
+   - Added native `scroll-behavior: smooth` and `scroll-padding-top: 90px` to html in globals.css.
+   - Fully respected `prefers-reduced-motion: reduce` for accessibility compliance.
+
+================================================================================
+PHASE 6: LOCAL LLAMA 3.2 3B CHATBOT PORTING & MULTI-TURN INTEGRATION
+================================================================================
+
+A. Backend Chat Route Upgrade (`app/api/chat/route.js`)
+   - Ported functional local AI architecture connecting to Ollama at `http://127.0.0.1:11434/api/chat`.
+   - Model: `llama3.2:3b` (private by design, zero API keys required).
+   - Payload Validation: Enforced non-empty message string validation (HTTP 400 for empty or malformed requests).
+   - Conversation History Sanitization: Filtered input history to strictly `role: "user" | "assistant"`, capped at the latest 10 messages, with 4000 character limits per message.
+   - Non-blocking Session Context: Read `eira_session` cookie and `readDb()` to optionally personalize system prompt with user name if logged in, while preserving unauthenticated guest access.
+   - EIRA System Instructions: Tailored empathetic, non-diagnostic guidance emphasizing grounding, stress management, and clear escalation to emergency/crisis services (Tele-MANAS 14416 / 112) without claiming clinical diagnosis.
+   - Robust Error Handling & 60s Timeout: Controlled 504 on timeout, 503 on Ollama offline / model missing, and zero Next.js server crash.
+
+B. Neo-Brutalist ChatWidget (`app/components/ChatWidget/`)
+   - Created `app/components/ChatWidget/page.js` and `app/components/ChatWidget/ChatWidget.module.css`.
+   - Adheres strictly to locked EIRA Neo-Brutalist design language:
+     * 0px corner radii
+     * 2.5px - 3px solid #000000 borders
+     * Hard offset shadows (`4px 4px 0px #000000`, `8px 8px 0px #000000`)
+     * High-contrast electric purple, lime chartreuse, and crisp white surfaces
+     * Space Grotesk editorial typography with uppercase badges
+   - Features:
+     * Persistent floating launcher (`💬 TALK TO EIRA`)
+     * Expand/collapse animation
+     * Multi-language dropdown (English, Hindi, Urdu, Bengali, Tamil, Telugu, Marathi, Gujarati, Punjabi)
+     * Multi-turn session history (`history: nextMessages.slice(-10)`)
+     * Typing indicators and disclaimer
+     * Graceful offline error banner
+
+C. Dedicated Page Memory Upgrade (`app/components/AiChatbot/page.js`)
+   - Upgraded full-page AI chatbot (`/components/AiChatbot`) to transmit sanitized 10-message multi-turn history.
+
+D. Global Layout Mounting (`app/layout.js`)
+   - Mounted `<ChatWidget />` globally in RootLayout while preserving Server Component architecture.
+
+E. Ollama Environment & Scripts
+   - Created `setup-llama.sh` (executable) and `setup-llama.bat`.
+   - Updated `.env.example` with `LOCAL_LLM_URL` and `LOCAL_LLM_MODEL`.
+   - Updated `README.md` with Ollama download, model pulling (`ollama pull llama3.2:3b`), and offline usage notes.
+
+================================================================================
+PHASE 7: GOOGLE GEMINI API PROVIDER MIGRATION
+================================================================================
+
+A. Backend Chat Route Provider Swap (`app/api/chat/route.js`)
+   - Replaced local Ollama with official Google Gemini REST API (`https://generativelanguage.googleapis.com/v1beta/models/...:generateContent`).
+   - Default model: `gemini-1.5-flash` (fast, lightweight, highly responsive for hackathon demo).
+   - Server-side only: `GEMINI_API_KEY` stored exclusively on the server, never exposed in client bundles or error messages.
+   - History Conversion: Converted conversational history to Gemini's native format (`contents` array with strictly alternating `user` and `model` roles).
+   - System Instructions: Injected student wellness guardrails into Gemini `systemInstruction` with empathy, grounding, non-diagnostic guidance, emergency escalation (Tele-MANAS 14416 / 112), and language enforcement.
+   - Preserved Non-blocking Authentication: Personalized with user name if `eira_session` cookie is present, while preserving full unauthenticated support.
+   - Error Handling: Returned clean 400 for invalid/empty messages, 500 for missing `GEMINI_API_KEY`, 504 for timeouts, and sanitized 502/503 without leaking credentials.
+
+B. Frontend Provider Decoupling (`app/components/ChatWidget/`, `app/components/AiChatbot/`)
+   - Kept the exact same visual design, Neo-Brutalist styling, 0px radius, thick borders, and layout.
+   - Updated header badge in ChatWidget from `LOCAL LLM` to `AI ASSISTANT`.
+   - Updated fallback error messages to provider-agnostic text without mentioning local services.
+
+C. Environment & Documentation
+   - Updated `.env.example` with `GEMINI_API_KEY` and optional `GEMINI_MODEL`.
+   - Updated `README.md` with Gemini API key setup instructions.
+
+================================================================================
+END OF CHANGELOG
+================================================================================

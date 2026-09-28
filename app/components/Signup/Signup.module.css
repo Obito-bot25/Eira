@@ -1,0 +1,242 @@
+.container {
+  min-height: calc(100vh - 80px);
+  background-color: var(--bg-primary, #FAF7F2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+}
+
+.card {
+  background: var(--bg-card, #FFFFFF);
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+  padding: 40px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: var(--color-green, #BBF7D0);
+  border: 2px solid var(--color-black, #121212);
+  box-shadow: 2px 2px 0 var(--color-black, #121212);
+  padding: 4px 10px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.secBadge {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #059669;
+}
+
+.title {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  color: var(--color-black, #121212);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #4B5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.socialButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.googleBtn,
+.otherBtn {
+  border: 2.5px solid var(--color-black, #121212);
+  background: var(--bg-card, #FFFFFF);
+  color: var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 10px 14px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.googleBtn:hover,
+.otherBtn:hover {
+  background: var(--bg-secondary, #F4EFE6);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px solid var(--color-black, #121212);
+}
+
+.divider span {
+  padding: 0 12px;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.inputGroup label {
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--color-black, #121212);
+}
+
+.inputGroup input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 2.5px solid var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 12px 14px;
+  font-family: var(--font-body, "Plus Jakarta Sans", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-black, #121212);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  background: #FFFBEB;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.checkboxContainer input {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.checkboxContainer a {
+  color: var(--color-black, #121212);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.errorBox {
+  background: var(--color-pink, #FECDD3);
+  border: 2.5px solid var(--color-black, #121212);
+  box-shadow: 3px 3px 0 var(--color-black, #121212);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.submitBtn {
+  background: var(--color-yellow, #FEF08A);
+  color: var(--color-black, #121212);
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  font-size: 0.95rem;
+  border: 3px solid var(--color-black, #121212);
+  box-shadow: 4px 4px 0 var(--color-black, #121212);
+  width: 100%;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 8px;
+}
+
+.submitBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-black, #121212);
+}
+
+.submitBtn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--color-black, #121212);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loginRow {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 2px dashed var(--color-black, #121212);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.loginLink {
+  color: var(--color-black, #121212);
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-weight: 900;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+@media (max-width: 600px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
